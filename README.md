@@ -22,4 +22,6 @@ Serão avaliados os seguintes itens:
 
 Em caso de dúvidas sobre o desafio, entre em contato.
 
+Adicionamos um projeto do Postman para auxílio.
+
 Lembre-se que uma boa aplicação é bem testada.
