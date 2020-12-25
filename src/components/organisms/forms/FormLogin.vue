@@ -66,7 +66,7 @@ api-login(
       @submit="handleSubmit(__onSubmit)"
     )
       div(class="text-h4 text-bold text-center text-grey-9 q-mb-lg")
-        | Login
+        | Entrar
 
       ValidationProvider(
         class="col-12"

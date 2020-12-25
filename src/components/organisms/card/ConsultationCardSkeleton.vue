@@ -15,38 +15,10 @@ q-card(class="shadow-card full-width cursor-pointer")
           class="bg-grey-1 q-py-xs q-px-sm"
         )
           div(class="row items-center no-wrap")
-            div(class="row column items-center")
-              div(class="text-bold text-primary text-subtitle2")
-                q-skeleton(
-                  type="text"
-                  width="20px"
-                )
-
-              div(class="text-bold text-subtitle1 text-grey-9")
-                q-skeleton(
-                  type="text"
-                  width="20px"
-                )
-
-            q-separator(
-              inset
-              vertical
-              color="primary"
-              class="q-mx-sm"
+            q-skeleton(
+              height="58px"
+              width="100px"
             )
-
-            div(class="row column items-center")
-              div(class="text-bold text-primary text-subtitle2")
-                q-skeleton(
-                  type="text"
-                  width="20px"
-                )
-
-              div(class="text-bold text-subtitle1 text-grey-9")
-                q-skeleton(
-                  type="text"
-                  width="20px"
-                )
 
       div(class="row")
         div(class="text-subtitle2 text-grey-7")

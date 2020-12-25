@@ -21,7 +21,7 @@ export default {
   methods: {
     async __onLogount () {
       await this.$axios.onLogount()
-      this.$router.push('/')
+      this.$router.push('/login')
     }
   }
 }
@@ -55,7 +55,7 @@ q-btn-dropdown(
     q-item(
       clickable
       v-close-popup
-      to="consultationCreate"
+      to="/consultationCreate"
     )
       q-item-section
         | Criar consulta
@@ -63,7 +63,7 @@ q-btn-dropdown(
     q-item(
       clickable
       v-close-popup
-      to="consultationList"
+      to="/consultationList"
     )
       q-item-section
         | Lista de consulta

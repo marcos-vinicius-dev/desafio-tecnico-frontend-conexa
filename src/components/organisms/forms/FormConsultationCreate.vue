@@ -1,6 +1,8 @@
 <script>
 import ApiConsultationCreate from '../../api/ConsultationCreate.js'
 
+import { date } from 'quasar'
+
 const initFormData = {
   idMedico: 12,
   paciente: null,
@@ -36,6 +38,11 @@ export default {
       }
       const [day, month, year] = date.split('/')
       return `${year}-${month}-${day}T${hour}`
+    },
+
+    __datesOptions (value) {
+      const timeStamp = Date.now()
+      return value >= date.formatDate(timeStamp, 'YYYY/MM/DD')
     },
 
     async __onDone ({ data }) {
@@ -140,6 +147,7 @@ api-consultation-create(
                 q-date(
                   mask="DD/MM/YYYY"
                   v-model="dataLocal"
+                  :options="__datesOptions"
                 )
                   div(class="row items-center justify-end")
                     q-btn(
@@ -148,6 +156,7 @@ api-consultation-create(
                       color="primary"
                       label="Fechar"
                     )
+
       ValidationProvider(
         class="col-12"
         name="Horário"
