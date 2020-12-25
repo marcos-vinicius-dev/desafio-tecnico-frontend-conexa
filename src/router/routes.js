@@ -1,17 +1,17 @@
 const requireAuth = {
   require: true,
-  redirectNotAllowed: '/'
+  redirectNotAllowed: '/login'
 }
 
 const notRequireAuth = {
   require: false,
-  redirectNotAllowed: '/dashboard'
+  redirectNotAllowed: '/'
 }
 
 const routes = [
   {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    path: '/login',
+    component: () => import('layouts/AuthLayout.vue'),
     children: [
       {
         path: '',
@@ -19,6 +19,21 @@ const routes = [
           auth: notRequireAuth
         },
         component: () => import('pages/Index.vue')
+      }
+    ]
+  },
+  {
+    path: '/',
+    redirect: 'dashboard',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        name: 'dashboard',
+        path: '/dashboard',
+        meta: {
+          auth: requireAuth
+        },
+        component: () => import('pages/Dashboard.vue')
       },
       {
         path: 'consultationCreate',
@@ -41,13 +56,6 @@ const routes = [
           auth: requireAuth
         },
         component: () => import('pages/ConsultationList.vue')
-      },
-      {
-        path: 'dashboard',
-        meta: {
-          auth: requireAuth
-        },
-        component: () => import('pages/Dashboard.vue')
       }
     ]
   },
