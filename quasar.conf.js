@@ -19,7 +19,9 @@ module.exports = function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
     boot: [
-      '/axios.js'
+      '/axios.js',
+      '/vee-validate.js',
+      '/vuexPersist.js'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -43,14 +45,14 @@ module.exports = function (/* ctx */) {
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
 
       // transpile: false,
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
       // Applies only if "transpile" is set to true.
-      // transpileDependencies: [],
+      transpileDependencies: [],
 
       // rtl: false, // https://quasar.dev/options/rtl-support
       // preloadChunks: true,
@@ -88,7 +90,7 @@ module.exports = function (/* ctx */) {
             '/media',
             '/pub'
           ],
-          target: 'desafio.conexasaude.com.br',
+          target: 'http://desafio.conexasaude.com.br',
           changeOrigin: true
         }
       ]
@@ -97,7 +99,7 @@ module.exports = function (/* ctx */) {
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
       iconSet: 'material-icons', // Quasar icon set
-      lang: 'en-us', // Quasar language pack
+      lang: 'pt-br', // Quasar language pack
       config: {},
 
       // Possible values for "importStrategy":
@@ -113,7 +115,10 @@ module.exports = function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Cookies',
+        'Notify'
+      ]
     },
 
     // animations: 'all', // --- includes all animations
@@ -130,9 +135,9 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'Quasar App',
-        short_name: 'Quasar App',
-        description: 'A Quasar Framework app',
+        name: 'Conexa',
+        short_name: 'conexa',
+        description: 'A Conexa app',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
