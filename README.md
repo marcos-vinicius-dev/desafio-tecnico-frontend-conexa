@@ -1,27 +1,26 @@
-Descrição:
-Precisamos construir um front onde nossos médicos de plantão consigam agendar atendimentos para os pacientes e listar os atendimentos agendados.
+# Quasar App (conexa)
 
-Será necessário ter uma tela de login para que médicos da clínica Conexa Saúde consigam acessar a aplicação, utilizando email e senha (Podem realizar o login com qualquer usuário de teste).
-O response do login será um token de validação e o nome do médico.
+A Quasar Framework app
 
-O médico poderá cadastrar, listar e detalhar uma consulta.
+## Install the dependencies
+```bash
+yarn
+```
 
-Link da API: http://desafio.conexasaude.com.br/swagger-ui.html#/desafio-rest
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
 
-Requisitos:
+### Lint the files
+```bash
+yarn run lint
+```
 
-* Desenvolver uma aplicação usando Vue JS;
-* Clonar este repositório, criar uma nova branch e abrir um merge request para master;
+### Build the app for production
+```bash
+quasar build
+```
 
-Serão avaliados os seguintes itens:
-
-* Clareza do código;
-* Estrutura criada para a aplicação;
-* Se os requisitos descritos acima foram atendidos;
-* Se possui descrição clara de como montar o ambiente local e realizar os testes (se houverem);
-
-Em caso de dúvidas sobre o desafio, entre em contato.
-
-Adicionamos um projeto do Postman para auxílio.
-
-Lembre-se que uma boa aplicação é bem testada.
+### Customize the configuration
+See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
