@@ -20,7 +20,7 @@ q-layout(view='hHh lpR fFf')
       div(class="col-12 col-md-8")
         div(class="row items-center")
           img(
-            alt="Quasar logo"
+            alt="Conexa logo"
             class="cursor-pointer"
             src="~assets/logo-conexa-white.svg"
             @click="$router.push('/dashboard')"
