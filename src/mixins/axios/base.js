@@ -2,14 +2,20 @@ import { slotScope } from '../../helpers'
 
 export default {
 
+  props: {
+    variables: {
+      type: Object,
+      default: undefined
+    }
+  },
+
   data () {
     return {
       data: undefined,
       error: undefined,
       loading: false,
       response: undefined,
-      url: undefined,
-      variables: undefined
+      url: undefined
     }
   },
 

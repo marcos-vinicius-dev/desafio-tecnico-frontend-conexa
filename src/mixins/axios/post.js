@@ -7,7 +7,6 @@ export default Vue.extend({
 
   methods: {
     async submit () {
-      console.log('deu')
       this.loading = true
       let response
 
